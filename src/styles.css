@@ -4,3 +4,7 @@
 body {
   background-color: #ffe9e9;
 }
+
+.linkable {
+  cursor: pointer;
+}

@@ -1,8 +1,11 @@
-<p class="text-center" (click)="goBack()">
-  Back 
+<p class="text-center linkable" (click)="goBack()">
+  Back
 </p>
-<div class="row col-8 offset-2">
-  <div class="card col-4" *ngFor="let feed of feeds" >
-    <instagram-box [feed]="feed"></instagram-box>
+
+<div class="row card-deck">
+  <div class="col-sm-4 mb-3" *ngFor="let feed of feeds">
+    <div class="card">
+      <app-instagram-box [feed]="feed"></app-instagram-box>
+    </div>
   </div>
 </div>
