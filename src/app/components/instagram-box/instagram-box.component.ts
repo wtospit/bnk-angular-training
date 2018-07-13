@@ -7,8 +7,8 @@ import { Feed } from '../../models/feed';
   styleUrls: ['./instagram-box.component.css']
 })
 export class InstagramBoxComponent implements OnInit {
-  @Input('feed')
-  feed: Feed;
+  @Input() feed: Feed;
+
   constructor() { }
 
   ngOnInit() {

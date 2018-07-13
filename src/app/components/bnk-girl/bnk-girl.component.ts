@@ -2,17 +2,16 @@ import { Component, OnInit, Input } from '@angular/core';
 import { GIRLS } from "../../mock-girls";
 import { Router } from '@angular/router';
 import { Member } from '../../models/member';
+
 @Component({
   selector: 'app-bnk-girl',
   templateUrl: './bnk-girl.component.html',
   styleUrls: ['./bnk-girl.component.css']
 })
 export class BnkGirlComponent implements OnInit {
+  @Input() member: Member;
+  public members: Member[] = GIRLS;
 
-  members: Member[] = GIRLS;
-
-  @Input('member')
-  public member: Member;
   constructor(private router: Router) { }
 
   ngOnInit() {
