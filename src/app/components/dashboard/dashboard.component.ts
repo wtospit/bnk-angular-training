@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GIRLS } from '../mock-girls';
+import { GIRLS } from '../../mock-girls';
 import { Member } from '../bnk-girl/bnk-girl.component';
 
 @Component({

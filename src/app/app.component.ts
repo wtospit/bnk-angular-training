@@ -1,6 +1,6 @@
 import { GIRLS } from './mock-girls';
 import { Component } from '@angular/core';
-import { Member } from './bnk-girl/bnk-girl.component';
+import { Member } from './components/bnk-girl/bnk-girl.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +8,7 @@ import { Member } from './bnk-girl/bnk-girl.component';
 })
 export class AppComponent {
   title = 'bnk48';
-  constructor(){
+  constructor() {
   }
 
 }

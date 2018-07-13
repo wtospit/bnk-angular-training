@@ -1,8 +1,8 @@
-import { Feed } from './../instagram-box/instagram-box.component';
+import { Feed } from '../instagram-box/instagram-box.component';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '../../../node_modules/@angular/router';
-import { HttpClient, HttpHeaders } from '../../../node_modules/@angular/common/http';
-import { Observable } from '../../../node_modules/rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'instagram-box-list',
@@ -12,13 +12,13 @@ import { Observable } from '../../../node_modules/rxjs';
 export class InstagramBoxListComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
-              private router: Router,
-              private http: HttpClient) { }
+    private router: Router,
+    private http: HttpClient) { }
 
   endpoint = "https://www.api.bnk48.com/api/social-feeds?page=1&max=1000000000000000&limit=19&username=";
 
   feeds: Feed[];
-  
+
   ngOnInit() {
     console.log(this.route.snapshot.paramMap.get("instagramId"));
     let instagramId = this.route.snapshot.paramMap.get("instagramId");
@@ -30,7 +30,7 @@ export class InstagramBoxListComponent implements OnInit {
   }
 
 
-  callApi(instagramId) : Observable<any>{
+  callApi(instagramId): Observable<any> {
     //const httpOptions = {
     //  headers: new HttpHeaders({
     //    'Content-Type': 'application/json',

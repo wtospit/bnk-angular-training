@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GIRLS } from "../mock-girls";
-import { Router } from '../../../node_modules/@angular/router';
+import { GIRLS } from "../../mock-girls";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-bnk-girl',
   templateUrl: './bnk-girl.component.html',
