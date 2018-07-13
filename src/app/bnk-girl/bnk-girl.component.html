@@ -5,15 +5,17 @@
   <img [src]="member.imgUrl" />
 </div> -->
 <!-- <div class="row col-8 offset-2"> -->
-  <!-- <div class="card col-4" (click)="onClick()"> -->
-  <!-- <div (click)="onClick()"> -->
-  <div [routerLink]="'/instagram/' + member.instagramId" >
+<!-- <div class="card col-4" (click)="onClick()"> -->
+<!-- <div (click)="onClick()"> -->
+<div [routerLink]="'/instagram/' + member.instagramId">
+  <div class="card-img-float">
     <img class="card-img-top" [src]="member.imgUrl" [alt]="member.name">
-    <div class="card-body">
-      <h5 class="card-title">{{ member.name }}</h5>
-      <p class="card-text">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </p>
-    </div>
   </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ member.name }}</h5>
+    <p class="card-text">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </p>
+  </div>
+</div>
 <!-- </div> -->

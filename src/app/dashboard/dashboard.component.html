@@ -1,5 +1,7 @@
-<div class="row col-8 offset-2">
-  <div class="card col-4" *ngFor="let member of members">
-    <bnk-girl [member]="member"></bnk-girl>
+<div class="row card-deck">
+  <div class="col-sm-4 mb-3" *ngFor="let member of members">
+    <div class="card">
+      <bnk-girl [member]="member"></bnk-girl>
+    </div>
   </div>
 </div>
