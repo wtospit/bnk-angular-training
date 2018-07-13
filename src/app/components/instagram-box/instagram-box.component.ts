@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Feed } from '../../models/feed';
 
 @Component({
   selector: 'app-instagram-box',
@@ -13,19 +14,4 @@ export class InstagramBoxComponent implements OnInit {
   ngOnInit() {
   }
 
-}
-
-export class Feed {
-  id: number;
-  username: string;
-  item_id: string;
-  service: string;
-  title: string;
-  url: string;
-  thumbnail: string;
-  created_time: number;
-  data: string;
-  status: number;
-  created: number;
-  changed: number;
 }

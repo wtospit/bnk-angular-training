@@ -1,4 +1,4 @@
-import { Member } from "./components/bnk-girl/bnk-girl.component";
+import { Member } from "./models/member";
 
 export const GIRLS: Member[] = [
   { id: 1, name: "Cherprang", imgUrl: "https://i.ytimg.com/vi/6crAs7KLWl8/maxresdefault.jpg", instagramId: "cherprang.bnk48official" },
