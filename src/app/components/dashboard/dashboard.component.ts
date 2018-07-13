@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GIRLS } from '../../mock-girls';
 import { Member } from '../../models/member';
+import { BnkService } from '../../services/bnk.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,11 +9,12 @@ import { Member } from '../../models/member';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  members: Member[];
 
-  members: Member[] = GIRLS;
+  constructor(private bnk: BnkService) { }
 
   ngOnInit() {
+    this.bnk.get().subscribe(data => this.members = data);
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GIRLS } from "../../mock-girls";
 import { Router } from '@angular/router';
 import { Member } from '../../models/member';
 
@@ -10,7 +9,6 @@ import { Member } from '../../models/member';
 })
 export class BnkGirlComponent implements OnInit {
   @Input() member: Member;
-  public members: Member[] = GIRLS;
 
   constructor(private router: Router) { }
 

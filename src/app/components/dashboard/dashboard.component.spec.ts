@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DashboardComponent } from './dashboard.component';
 import { BnkGirlComponent } from '../bnk-girl/bnk-girl.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -14,7 +15,8 @@ describe('DashboardComponent', () => {
         DashboardComponent,
         BnkGirlComponent
       ], imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule
       ]
     })
       .compileComponents();
