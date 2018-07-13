@@ -16,7 +16,18 @@ export class BnkService {
     return this.http.get<Member[]>(`${environment.api_base}/bnk/members`);
   }
 
+  getInfo(id: string): Observable<Member> {
+    return this.http.get<Member>(`${environment.api_base}/bnk/members/${id}`);
+  }
+
   getInstagram(id: string): Observable<InstagramFeed> {
     return this.http.get<InstagramFeed>(`${environment.instagram_api_base}${id}`);
+  }
+
+  saveInfo(data: Member): Observable<Object> {
+    if (data._id !== '') {
+      return this.http.patch(`${environment.api_base}/bnk/members/${data._id}`, data);
+    }
+    return this.http.post(`${environment.api_base}/bnk/members`, data);
   }
 }

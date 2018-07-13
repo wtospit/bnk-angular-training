@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ชื่อ</th>
+      <th>จัดการ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members">
+      <td>{{ member.name }}</td>
+      <td>
+        <a [routerLink]="['/admin', member._id]">แก้ไข</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

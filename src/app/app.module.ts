@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BnkGirlComponent } from './components/bnk-girl/bnk-girl.component';
 import { LoginComponent } from './components/login/login.component';
+import { BnkGirlListComponent } from './components/bnk-girl-list/bnk-girl-list.component';
+import { BnkGirlEditorComponent } from './components/bnk-girl-editor/bnk-girl-editor.component';
+import { JwtService } from './interceptors/jwt.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { LoginComponent } from './components/login/login.component';
     InstagramBoxListComponent,
     InstagramBoxComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    BnkGirlListComponent,
+    BnkGirlEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,11 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

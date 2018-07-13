@@ -1,5 +1,5 @@
 export class Member {
-  id: number;
+  _id: string;
   name: string;
   imgUrl: string;
   instagramId: string;

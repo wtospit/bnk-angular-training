@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { BnkGirlEditorComponent } from './bnk-girl-editor.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('BnkGirlEditorComponent', () => {
+  let component: BnkGirlEditorComponent;
+  let fixture: ComponentFixture<BnkGirlEditorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginComponent],
+      declarations: [BnkGirlEditorComponent],
       imports: [
         ReactiveFormsModule,
         HttpClientTestingModule,
@@ -22,7 +22,7 @@ describe('LoginComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(BnkGirlEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

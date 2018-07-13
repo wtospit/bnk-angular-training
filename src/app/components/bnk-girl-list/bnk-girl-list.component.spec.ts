@@ -1,19 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { BnkGirlListComponent } from './bnk-girl-list.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('BnkGirlListComponent', () => {
+  let component: BnkGirlListComponent;
+  let fixture: ComponentFixture<BnkGirlListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginComponent],
+      declarations: [BnkGirlListComponent],
       imports: [
-        ReactiveFormsModule,
         HttpClientTestingModule,
         RouterTestingModule
       ]
@@ -22,7 +20,7 @@ describe('LoginComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(BnkGirlListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
