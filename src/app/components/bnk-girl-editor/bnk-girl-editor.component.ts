@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BnkService } from '../../services/bnk.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -18,9 +18,9 @@ export class BnkGirlEditorComponent implements OnInit {
   ngOnInit() {
     this.editorForm = this.fb.group({
       _id: '',
-      name: '',
-      imgUrl: '',
-      instagramId: ''
+      name: ['', Validators.required],
+      imgUrl: ['', Validators.required],
+      instagramId: ['', Validators.required]
     });
 
     this.id = this.route.snapshot.paramMap.get("id");
@@ -30,8 +30,10 @@ export class BnkGirlEditorComponent implements OnInit {
   }
 
   save() {
-    this.bnk.saveInfo(this.editorForm.value).subscribe(() => {
-      this.router.navigate(['/admin']);
-    });
+    if (this.editorForm.valid) {
+      this.bnk.saveInfo(this.editorForm.value).subscribe(() => {
+        this.router.navigate(['/admin']);
+      });
+    }
   }
 }
